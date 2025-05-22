@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/dashboard/components/sidebar/index.css" />
+    <link rel="stylesheet" href="/dashboard/components/header/index.css" />
+    <link rel="stylesheet" href="/dashboard/pages/chamados/index.css" />
+    <link rel="stylesheet" href="/dashboard/global/index.css" />
+    <link rel="stylesheet" href="/dashboard/global/theme.css" />
+    <link rel="stylesheet" href="/dashboard/components/kanban/kanban.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <sidebar-component></sidebar-component>
+
+    <section id="chamados" class="content">
+      <header-component page-title="Chamados"></header-component>
+
+      <div class="container">
+        <div class="kanban-header">
+          <!-- TODO: implementar estilo e lógica do botão de pesquisa/filtrar -->
+          <div class="search-bar">
+            <input
+              type="text"
+              id="searchInput"
+              placeholder="Pesquisar chamados..."
+            />
+            <button id="searchBtn" class="search-btn">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+
+          <button id="addCardBtn" class="add-card-btn">
+            <i class="fas fa-plus"></i> Novo Chamado
+          </button>
+        </div>
+
+        <div class="kanban-board">
+          <kanban-column
+            title="Em aberto"
+            status="open"
+            class="column-active"
+          ></kanban-column>
+          <kanban-column
+            title="Em atendimento"
+            status="progress"
+          ></kanban-column>
+          <kanban-column title="Concluído" status="done"></kanban-column>
+        </div>
+      </div>
+
+      <!-- Modal para adicionar/editar card -->
+      <div id="cardModal" class="modal">
+        <div class="modal-content">
+          <span class="close-modal">&times;</span>
+          <h2>Novo Chamado</h2>
+          <form id="cardForm">
+            <div class="form-group">
+              <label for="cardTitle">Título</label>
+              <input type="text" id="cardTitle" required />
+            </div>
+            <div class="form-group">
+              <label for="cardDescription">Descrição</label>
+              <textarea id="cardDescription" rows="3"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="cardMessage">Mensagem</label>
+              <textarea id="cardMessage" rows="3"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="cardPriority">Prioridade</label>
+              <select id="cardPriority">
+                <option value="low">Baixa</option>
+                <option value="medium">Média</option>
+                <option value="high">Alta</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="cardAssignee">Responsável</label>
+              <select id="cardAssignee"></select>
+            </div>
+            <div class="form-group">
+              <label for="cardDeadline">Prazo</label>
+              <input type="date" id="cardDeadline" />
+            </div>
+            <div class="form-group">
+              <label for="cardStatus">Status</label>
+              <select id="cardStatus">
+                <option value="open">Em aberto</option>
+                <option value="progress">Em atendimento</option>
+                <option value="done">Concluído</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="cardClient">Cliente</label>
+              <select id="cardClient"></select>
+            </div>
+            <button type="submit" class="submit-btn">Salvar</button>
+          </form>
+        </div>
+      </div>
+
+      <footer-component></footer-component>
+    </section>
+
+    <script type="module" src="/dashboard/components/sidebar/index.js"></script>
+    <script type="module" src="/dashboard/components/header/index.js"></script>
+    <script type="module" src="/dashboard/global/index.js"></script>
+
+    <!-- Scripts do kanban -->
+    <script
+      type="module"
+      src="/dashboard/components/kanban/kanban-components.js"
+    ></script>
+    <script type="module" src="/dashboard/pages/chamados/index.js"></script>
+  </body>
+</html>

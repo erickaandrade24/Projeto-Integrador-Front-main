@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/dashboard/global/index.css" />
+    <link rel="stylesheet" href="/dashboard/global/theme.css" />
+    <link rel="stylesheet" href="/dashboard/components/sidebar/index.css" />
+    <link rel="stylesheet" href="/dashboard/components/header/index.css" />
+    <link
+      rel="stylesheet"
+      href="/dashboard/components/historic-table/index.css"
+    />
+    <link rel="stylesheet" href="/dashboard/components/pagination/index.css" />
+    <link rel="stylesheet" href="/dashboard/global/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <title>Projeto integrador</title>
+  </head>
+  <body>
+    <sidebar-component></sidebar-component>
+
+    <section id="histórico" class="content">
+      <header-component page-title="Histórico"></header-component>
+
+      <div class="container">
+        <historic-table-component chamado-id="123"></historic-table-component>
+      </div>
+
+      <footer-component></footer-component>
+    </section>
+  </body>
+
+  <script src="/dashboard/components/sidebar/index.js"></script>
+  <script src="/dashboard/components/header/index.js"></script>
+  <script src="/dashboard/global/index.js"></script>
+  <script src="/dashboard/components/historic-table/index.js"></script>
+  <script src="/dashboard/components/pagination/index.js"></script>
+</html>

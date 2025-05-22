@@ -1,0 +1,9 @@
+.modal-content {
+  /* Outros estilos que você já tem */
+  overflow-y: auto; /* Adiciona rolagem vertical quando necessário */
+  max-height: 80vh; /* Opcional: define uma altura máxima para o modal, evitando que ele ocupe toda a tela */
+}
+
+.modal {
+  /* Outros estilos do modal */
+  overflow: auto; /* Adiciona rolagem ao modal inteiro se o conteúdo for muito grande */ }

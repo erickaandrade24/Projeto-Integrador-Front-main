@@ -1,0 +1,27 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  background-color: var(--color-background-dark);
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  margin-left: 80px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  background-color: var(--color-background);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  height: calc(100vh - 180px);
+}

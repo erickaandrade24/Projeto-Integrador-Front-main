@@ -1,0 +1,154 @@
+.historic-table-container {
+}
+
+/* Table Header */
+.historic-table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.historic-table-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-text);
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.historic-table-title::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="%234a90e2" d="M480 0C497.7 0 512 14.33 512 32V96C512 113.7 497.7 128 480 128H32C14.33 128 0 113.7 0 96V32C0 14.33 14.33 0 32 0H480zM32 160H480V416C480 433.7 465.7 448 448 448H64C46.33 448 32 433.7 32 416V160zM0 480C0 462.3 14.33 448 32 448H480C497.7 448 512 462.3 512 480C512 497.7 497.7 512 480 512H32C14.33 512 0 497.7 0 480z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 8px;
+}
+
+/* Historic Table */
+.historic-table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  margin-top: 16px;
+  min-height: 600px;
+}
+
+.historic-table th {
+  text-align: left;
+  padding: 12px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text-light);
+  border-bottom: 1px solid var(--color-border);
+  position: sticky;
+  top: 0;
+  background-color: var(--color-white);
+}
+
+.historic-table td {
+  padding: 16px;
+  font-size: 14px;
+  color: var(--color-text);
+  border-bottom: 1px solid var(--color-border);
+  vertical-align: top;
+  min-height: 50px;
+}
+
+.historic-table tbody tr:hover {
+  background-color: var(--color-gray-50);
+}
+
+/* Status Badges */
+.historic-status-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 10px;
+  border-radius: var(--border-radius-lg);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.historic-status-open {
+  background-color: var(--color-status-open-bg);
+  color: var(--color-status-open);
+}
+
+.historic-status-attending {
+  background-color: var(--color-status-attending-bg);
+  color: var(--color-status-attending);
+}
+
+.historic-status-closed {
+  background-color: var(--color-status-closed-bg);
+  color: var(--color-status-closed);
+}
+
+.historic-status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 6px;
+}
+
+.historic-status-open .historic-status-dot {
+  background-color: var(--color-status-open);
+}
+
+.historic-status-attending .historic-status-dot {
+  background-color: var(--color-status-attending);
+}
+
+.historic-status-closed .historic-status-dot {
+  background-color: var(--color-status-closed);
+}
+
+/* No Data Message */
+.historic-no-data {
+  text-align: center;
+  padding: 20px;
+  color: var(--color-gray-400);
+  font-style: italic;
+}
+
+/* Action Colors */
+.historic-action-create {
+  color: var(--color-primary);
+  font-weight: 500;
+}
+
+.historic-action-update {
+  color: var(--color-secondary-dark);
+  font-weight: 500;
+}
+
+.historic-action-status_change {
+  color: var(--color-status-attending);
+  font-weight: 500;
+}
+
+.historic-action-comment {
+  color: var(--color-gray-500);
+  font-weight: 500;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .historic-table-container {
+    padding: 16px;
+  }
+  
+  .historic-table th,
+  .historic-table td {
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+  
+  .historic-table-title {
+    font-size: 16px;
+  }
+}

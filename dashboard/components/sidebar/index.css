@@ -1,0 +1,92 @@
+#sidebar {
+  width: 60px;
+  background-color: var(--color-background);
+  transition: width 0.3s;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  position: fixed;
+  padding-block: 20px;
+}
+
+#sidebar.open-sidebar {
+  width: 200px;
+}
+
+#side_itens {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  cursor: pointer;
+  list-style: none;
+  padding: 10px;
+  margin: 0;
+}
+
+.side-iten a {
+  display: flex;
+  align-items: center;
+  padding: 10px 10px;
+  color: black;
+  text-decoration: none;
+  gap: 12px;
+  border-radius: 8px;
+}
+
+/* Hover effect */
+.side-iten a:hover {
+  background-color: var(--color-background-dark);
+}
+
+/* Active state */
+.side-iten.active a {
+  background-color: var(--color-background-dark);
+  font-weight: bold;
+}
+
+/* Icon + text */
+.item-descricao {
+  opacity: 0;
+  white-space: nowrap;
+  transition: opacity 0.2s ease-in-out;
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--color-text);
+}
+
+#sidebar.open-sidebar .item-descricao {
+  opacity: 1;
+}
+
+/* Logout styling */
+#logout {
+  padding-inline: 16px;
+  padding-bottom: 40px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+
+#logout_uni {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: black;
+  padding: 10px 10px;
+  border-radius: 8px;
+  width: 90%;
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--color-text);
+}
+
+/* Logout hover */
+#logout_uni:hover {
+  background-color: var(--color-background-dark);
+}
