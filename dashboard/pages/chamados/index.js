@@ -20,15 +20,15 @@ class KanbanApp {
   }
 
   initializeElements() {
-    // ... (seu código para inicializar elementos) ...
+    
   }
 
   setupEventListeners() {
-    // ... (seu código para configurar listeners) ...
+  
   }
 
   async loadData(status = 'all') {
-    // ... (seu código para carregar dados) ...
+  
   }
   
 
